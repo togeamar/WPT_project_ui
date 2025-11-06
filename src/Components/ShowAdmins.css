@@ -1,0 +1,41 @@
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  font-family: "Inter", sans-serif;
+}
+
+.admin-list-card .card-body {
+  background-color: transparent;
+}
+
+.admin-list-card {
+  background: white;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.admin-list-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 123, 255, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.trash:hover{
+  border-radius: 50%;
+  background-color: red;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.trash{
+  color: red;
+}
+
+.add-admin-btn {
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-admin-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}

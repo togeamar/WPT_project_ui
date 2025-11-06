@@ -1,0 +1,27 @@
+.admin-signup-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.admin-signup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  color: #495057;
+}
+
+button.rounded-pill {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+}
+
+body {
+  background: linear-gradient(135deg, #e0eaff, #f4f7ff);
+}

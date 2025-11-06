@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(135deg, #f0f4ff, #e8f0fe);
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-card {
+  background: white;
+  transition: all 0.3s ease;
+  border-radius: 18px;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+.score-bubble {
+  background: linear-gradient(135deg, #007bff, #00b4d8);
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
