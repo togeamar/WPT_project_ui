@@ -3,6 +3,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .admin-card {
   background: white;
   transition: all 0.3s ease;

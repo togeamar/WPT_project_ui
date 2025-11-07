@@ -47,7 +47,7 @@ export function Analysis() {
           transition={{ type: "spring", stiffness: 100 }}
           className="d-inline-block bg-light shadow-lg p-4 rounded-4"
         >
-          <h3 className="fw-bold text-dark">{analysisData.overall_score}/10</h3>
+          <h3 className="fw-bold text-dark">{analysisData.overall_score}/100</h3>
         </motion.div>
       </motion.div>
 

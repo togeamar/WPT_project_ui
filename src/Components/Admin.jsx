@@ -27,7 +27,7 @@ export function Admin() {
         try {
           const response = await getScore();
           console.log("✅ API Response:", response);
-          setScores(response.data);
+          setScores(response.data.reverse());
         } catch (error) {
           console.log(error);
           setError(error?.message || "Error fetching score");
@@ -91,7 +91,7 @@ export function Admin() {
         {scores.length === 0 ? (
           <p className="text-center text-muted">No scores available.</p>
         ) : (
-          scores.map((entry, i) => (
+          scores.reverse().map((entry, i) => (
             <Col key={i} xs={12} md={6} lg={4}>
               <motion.div
                 custom={i}

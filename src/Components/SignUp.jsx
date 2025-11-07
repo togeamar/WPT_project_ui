@@ -6,12 +6,14 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { doSignup } from "../services/userservices";
+import { Eye, EyeSlash } from "react-bootstrap-icons";
 
 export function SignUp() {
   const navigate = useNavigate();
   const [serverError, setServerError] = useState(null);
   const [success, setSuccess] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showPassword,setShowPassword]=useState(false);
 
  
   const SignUpSchema = Yup.object().shape({
@@ -31,6 +33,7 @@ export function SignUp() {
         .matches(/[^A-Za-z0-9]/, "Password must contain at least one special character"),
   });
 
+  const togglepassword=()=>setShowPassword(!showPassword)
 
   const handleSubmit = async (values, { resetForm }) => {
     setLoading(true);
@@ -165,7 +168,7 @@ export function SignUp() {
                       <label className="form-label fw-semibold">Password</label>
                       <Field
                         name="password"
-                        type="password"
+                        type={showPassword?"text":"password"}
                         className={`form-control ${
                           touched.password && errors.password ? "is-invalid" : ""
                         }`}
@@ -176,6 +179,9 @@ export function SignUp() {
                         name="password"
                         className="invalid-feedback"
                       />
+                      <Button variant="outline-secondary" onClick={togglepassword}>
+                        {showPassword?<EyeSlash/>:<Eye/>}
+                      </Button>
                     </div>
 
                     <div className="d-grid mt-4">
